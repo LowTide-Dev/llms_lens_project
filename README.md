@@ -39,7 +39,7 @@ The tuned lens shows more structure. By L3–L5 in images 1 and 2, predictions s
 
 ## Why is this useful?
 
-These tools give us a window into the "reasoning process" of a transformer — rather than 
+These tools give us a window into the "reasoning process" of a transformer, rather than 
 treating the model as a black box that maps input to output, we can watch predictions 
 evolve across depth. This is useful for:
 
@@ -52,7 +52,7 @@ evolve across depth. This is useful for:
 ## Known limitations
 
 **Logit lens** assumes that early residual states are interpretable in the vocabulary 
-space of the final layer — this is often not true, especially in early layers where 
+space of the final layer, this is often not true, especially in early layers where 
 representations are far from "final form." Results can be misleading or noisy.
 
 **Tuned lens** is only as good as its training data and training time. The probes trained 
@@ -60,7 +60,7 @@ here are lightweight and trained on a small slice of Wikitext-2, so they won't b
 accurate as the pretrained probes from the original paper (which no longer appear to be 
 publicly hosted for small Pythia models).
 
-Both tools show correlation, not causation — a token appearing in the logit lens at 
+Both tools show correlation, not causation, a token appearing in the logit lens at 
 layer 5 doesn't necessarily mean that layer "decided" on that token. The residual stream 
 is a sum of many contributions.
 
